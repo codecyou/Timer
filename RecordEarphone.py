@@ -187,7 +187,7 @@ class MainPage(object):
         if self.time_start == 0:
             return
         # 写出记录
-        time_start = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(self.time_start))
+        time_start = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(self.time_start))
         # print(time_start)
         time_current = time.time() - self.time_start  # 本次煲机时长
         self.record["time_ago"] = self.time_ago + time_current  # 更新已煲机总时长
